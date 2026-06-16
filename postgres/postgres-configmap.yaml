@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  namespace: myapp
+data:
+  POSTGRES_DB: laravel_db

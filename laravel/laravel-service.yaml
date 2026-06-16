@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: laravel-service
+  namespace: myapp
+  labels:
+    app: laravel-app
+spec:
+  selector:
+    app: laravel-app
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8000
+  type: NodePort
