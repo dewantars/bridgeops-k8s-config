@@ -20,7 +20,7 @@ spec:
           image: praktikan/bridgeops-ai:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8000
+            - containerPort: 8080
               name: http
           envFrom:
             - configMapRef:
@@ -30,12 +30,12 @@ spec:
           readinessProbe:
             httpGet:
               path: /health
-              port: 8000
+              port: 8080
             initialDelaySeconds: 15
             periodSeconds: 10
           livenessProbe:
             httpGet:
               path: /health
-              port: 8000
+              port: 8080
             initialDelaySeconds: 30
             periodSeconds: 20
