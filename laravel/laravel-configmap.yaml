@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: laravel-config
+  namespace: myapp
+data:
+  APP_NAME: BridgeOps
+  APP_ENV: production
+  APP_DEBUG: "false"
+  APP_URL: http://laravel-service
+  LOG_CHANNEL: stderr
+  DB_CONNECTION: pgsql
+  DB_HOST: postgres
+  DB_PORT: "5432"
+  DB_DATABASE: laravel_db
+  CACHE_STORE: file
+  QUEUE_CONNECTION: sync
+  SESSION_DRIVER: file
